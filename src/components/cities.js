@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getCity } from '../actions';
+import { getCity } from './../actions/index';
 
 const Cities = ({ city, isFetching, error, dispatch }) => {
     
@@ -22,11 +22,13 @@ const Cities = ({ city, isFetching, error, dispatch }) => {
 
     return( 
         <div>
-            <div>
-                <h3>{city.city}</h3>
-                <h5>Region: {city.region}</h5>
-                <h5>Time Zone: {city.timezone_name}</h5>
+            <div className='city'>
+              <h3>{city.city},{city.region} </h3>
+              <h5>IP Address: {city.ip}</h5>
+              <h5>Region: {city.region}</h5>
+              <h5>Time Zone: {city.timezone_name}</h5>
             </div>
+            
             <button onClick={handleClick}>Get New City</button>
         </div>
     )
@@ -35,7 +37,7 @@ const Cities = ({ city, isFetching, error, dispatch }) => {
 const mapStateToProps = (state) => {
     console.log(state, 'state')
     return {
-      quote: state.city,
+      city: state.city,
       isFetching: state.isFetching,
       error: state.error
     };

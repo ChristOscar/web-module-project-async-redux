@@ -2,6 +2,7 @@ import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from './../actions';
 
 const initialState = {
   city: {
+    ip: '',
     city: '',
     region: '',
     timezone_name: ''
@@ -29,7 +30,7 @@ export const reducer = (state = initialState, action) => {
     case FETCH_FAIL:
       return {
         ...state,
-        quote:{},
+        city:{},
         isFetching: false,
         error: action.payload
       };

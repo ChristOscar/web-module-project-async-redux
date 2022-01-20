@@ -23,7 +23,7 @@ export const fetchStart = () => {
 }
 
 export const fetchSuccess = (city) => {
-  return({type:FETCH_SUCCESS, payload: quote});
+  return({type:FETCH_SUCCESS, payload: city});
 }
 
 export const fetchFail = (errorMessage) => {
