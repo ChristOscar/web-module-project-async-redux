@@ -24,8 +24,8 @@ const Cities = ({ city, isFetching, error, dispatch }) => {
         <div>
             <div>
                 <h3>{city.city}</h3>
-                <h5>Song: {city.region}</h5>
-                <h5>Album: {city.timezone_name}</h5>
+                <h5>Region: {city.region}</h5>
+                <h5>Time Zone: {city.timezone_name}</h5>
             </div>
             <button onClick={handleClick}>Get New City</button>
         </div>

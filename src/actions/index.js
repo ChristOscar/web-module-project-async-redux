@@ -7,7 +7,7 @@ export const FETCH_SUCCESS = "FETCH-SUCCESS";
 export const getCity = () => {
   return (dispatch) => {
     dispatch(fetchStart());
-    axios.get('http://ipwhois.app/json/8.8.4.4')
+    axios.get('http://ipwhois.app/json/22.8.4.4')
       .then(resp => {
         dispatch(fetchSuccess(resp.data));
         console.log(resp);
