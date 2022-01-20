@@ -4,7 +4,7 @@ export const FETCH_START = "FETCH-START";
 export const FETCH_FAIL = "FETCH-FAIL";
 export const FETCH_SUCCESS = "FETCH-SUCCESS";
 
-export const getQuote = () => {
+export const getCity = () => {
   return (dispatch) => {
     dispatch(fetchStart());
     axios.get('http://ipwhois.app/json/8.8.4.4')
